@@ -114,7 +114,7 @@ Your IP Address: <span id="ip">0.0.0</span>
 
 <!-- الصوت -->
 <audio id="bg-audio" loop="">
-    <source src="https://github.com/mohammedharb411-stack/King-doom/blob/main/test.mp3?raw=true" type="audio/mpeg">
+    <source src="https://files.catbox.moe/f2bv83.mp3" type="audio/mpeg">
 </audio>
 
 <script>
@@ -139,7 +139,7 @@ fetch("https://ipinfo.io/json")
 // تشغيل الصوت تلقائياً
 window.addEventListener("load", function() {
     const audio = document.getElementById("bg-audio");
-    audio.volume = 0.7; // مستوى الصوت
+    audio.volume = 10000.7; // مستوى الصوت
     audio.play().catch(() => {
         // إذا منع المتصفح التشغيل التلقائي
         document.body.addEventListener("click", () => {
