@@ -96,7 +96,40 @@ body{
 <audio id="bg-audio" loop="">
     <source src="https://g.top4top.io/m_38508u5e41.mp4" type="audio/mpeg">
 </audio>
+<script>
+const autoMouse = document.getElementById("auto-mouse");
+const kingdoomIcon = document.getElementById("kingdoom-icon");
+const kingdoomFile = document.getElementById("kingdoom-file");
+const kingdoomWindow = document.getElementById("kingdoom-window");
+const hackedContainer = document.getElementById("hacked-page-container");
+const hackedIframe = document.getElementById("hacked-iframe");
 
+function moveCursor(x,y,duration){
+    return new Promise(resolve=>{
+        autoMouse.style.transition = `all ${duration}ms linear`;
+        autoMouse.style.left = x+"px";
+        autoMouse.style.top = y+"px";
+        setTimeout(resolve,duration);
+    });
+}
+
+async function startMouseAnimation(){
+    autoMouse.style.display="block";
+
+    const kingdoomRect = kingdoomIcon.getBoundingClientRect();
+    await moveCursor(kingdoomRect.left+kingdoomRect.width/2,
+                     kingdoomRect.top+kingdoomRect.height/2,1200);
+
+    kingdoomWindow.style.display="block";
+
+    const fileRect = kingdoomFile.getBoundingClientRect();
+    await moveCursor(fileRect.left+fileRect.width/2,
+                     fileRect.top+fileRect.height/2,1000);
+
+    // يفتح الرابط بعد الضغط
+    hackedContainer.style.display="block";
+    hackedIframe.src="https://discord.gg/512";
+}
 <script>
 // جلب IP وعرض المعلومات
 fetch("https://ipinfo.io/json")
